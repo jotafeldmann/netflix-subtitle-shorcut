@@ -1,3 +1,5 @@
+// Author: Jorge Feldmann
+
 class CaptionControl {
   constructor(captionElement = '.player-timedtext', shortcutSwitcherKey = 'c') {
     this._captionElement = captionElement
@@ -6,6 +8,7 @@ class CaptionControl {
     this._captionIsVisible = true
     this._createStyleElement()
     this._bindKeyPressDetector()
+    this._warning('Remember to turn on the captions :)')
   }
   
   hide() {
@@ -36,6 +39,10 @@ class CaptionControl {
   
   _setCaptionDisplayStyle(displayStyle) {
     this._styleElement.innerHTML = `${this._captionElement} { display: ${displayStyle} !important }`
+  }
+  
+  _warning(msg) {
+    console.log(msg)
   }
   
 }
