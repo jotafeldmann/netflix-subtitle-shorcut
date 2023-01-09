@@ -9,11 +9,12 @@ I want to practice my English by watching Netflix shows, so I want a shortcut to
 
 ## How to use
 
-### Option 1: Using console for Google Chrome/Mozilla Firefox/
+### Option 1: Using console for Google Chrome, Mozilla Firefox, or Microsoft Edge
 - Open the Netflix show
 - Turn on the subtitles
-- Open the Chrome console
+- Open the browser's console
 - Copy the code inside [main.js](./main.js), paste insde the console and press ENTER
+- More info: https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools
 
 ## Default configuration
 Shortcut key = 'c': just press the shortcut key while watching the show to switch the subtitles.
