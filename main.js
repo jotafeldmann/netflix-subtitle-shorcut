@@ -1,33 +1,33 @@
 // Author: Jorge Feldmann
 
-class CaptionControl {
-  constructor(captionElement = '.player-timedtext', shortcutSwitcherKey = 'c') {
-    this._captionElement = captionElement
+class SubtitleControl {
+  constructor(subtitleElement = '.player-timedtext', shortcutSwitcherKey = 'c') {
+    this._subtitleElement = subtitleElement
     this._shortcutKey = shortcutSwitcherKey
     this._styleElement = null
-    this._captionIsVisible = true
+    this._subtitleIsVisible = true
     this._createStyleElement()
     this._bindKeyPressDetector()
-    this._warning('Remember to turn on the captions :)')
+    this._warning('Remember to turn on the subtitles :)')
   }
   
   hide() {
-    this._setCaptionDisplayStyle('none')
+    this._setSubtitleDisplayStyle('none')
     return false
   }
   
   show() {
-    this._setCaptionDisplayStyle('block')
+    this._setSubtitleDisplayStyle('block')
     return true
   }
   
-  switchCaptionStatus() {
-    this._captionIsVisible = this._captionIsVisible ? this.hide() : this.show()
+  switchSubtitleStatus() {
+    this._subtitleIsVisible = this._subtitleIsVisible ? this.hide() : this.show()
   }
   
   _bindKeyPressDetector() {
     var callback = (function (e) {
-       if (e.key === this._shortcutKey) this.switchCaptionStatus()
+       if (e.key === this._shortcutKey) this.switchSubtitleStatus()
     }).bind(this)
     document.onkeydown = callback
   }
@@ -37,8 +37,8 @@ class CaptionControl {
     document.head.appendChild(this._styleElement)
   }
   
-  _setCaptionDisplayStyle(displayStyle) {
-    this._styleElement.innerHTML = `${this._captionElement} { display: ${displayStyle} !important }`
+  _setSubtitleDisplayStyle(displayStyle) {
+    this._styleElement.innerHTML = `${this._subtitleElement} { display: ${displayStyle} !important }`
   }
   
   _warning(msg) {
@@ -47,6 +47,6 @@ class CaptionControl {
   
 }
 
-var c = new CaptionControl()
+var c = new SubtitleControl()
 
 
