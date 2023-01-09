@@ -1,7 +1,25 @@
-const captionElement = '.player-timedtext'
-
-const styleElement = document.createElement('style')
-document.head.appendChild(styleElement)
-
-const hide = () => style.innerHTML = `${captionElement} { display: none !important }`
-const show = () => style.innerHTML = `${captionElement} { display: block !important }`
+class CaptionControl {
+  constructor(captionElement = '.player-timedtext') {
+    this._captionElement = captionElement
+    this._styleElement = null
+    this._createStyleElement()
+  }
+  
+  hide() {
+    this._setCaptionDisplayStyle('none')
+  }
+  
+  show() {
+    this._setCaptionDisplayStyle('block')
+  }
+  
+  _createStyleElement() {
+    this._styleElement = document.createElement('style')
+    document.head.appendChild(this._styleElement)
+  }
+  
+  _setCaptionDisplayStyle(displayStyle) {
+    this._styleElement.innerHTML = `${this._captionElement} { display: ${displayStyle} !important }`
+  }
+  
+}
