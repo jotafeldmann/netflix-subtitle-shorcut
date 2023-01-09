@@ -8,10 +8,12 @@ No guarantees. This software must not cause harm at all. Use it at your discreti
 I want to practice my English by watching Netflix shows, so I want a shortcut to show and hide the subtitles.
 
 ## How to use
+
+### Option 1: Using console for Google Chrome/Mozilla Firefox/
 - Open the Netflix show
 - Turn on the subtitles
 - Open the Chrome console
-- Paste the code inside main.js on the console and press <ENTER>
+- Copy the code inside [main.js](./main.js), paste insde the console and press ENTER
 
 ## Default configuration
 Shortcut key = 'c'
