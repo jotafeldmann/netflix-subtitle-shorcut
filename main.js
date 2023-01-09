@@ -23,9 +23,10 @@ class CaptionControl {
   }
   
   _bindKeyPressDetector() {
-    document.onkeydown = function (e) {
-      if (e.key === this._shortcutKey) this.switchCaptionStatus()
-    }
+    var callback = (function (e) {
+       if (e.key === this._shortcutKey) this.switchCaptionStatus()
+    }).bind(this)
+    document.onkeydown = callback
   }
   
   _createStyleElement() {
