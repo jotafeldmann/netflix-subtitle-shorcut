@@ -16,8 +16,7 @@ I want to practice my English by watching Netflix shows, so I want a shortcut to
 - Copy the code inside [main.js](./main.js), paste insde the console and press ENTER
 
 ## Default configuration
-Shortcut key = 'c'
-Just press the Shortcut key while watching the show to switch the subtitles.
+Shortcut key = 'c': just press the shortcut key while watching the show to switch the subtitles.
 
 ## Author
 [Jorge Feldmann](https://github.com/jotafeldmann/)
