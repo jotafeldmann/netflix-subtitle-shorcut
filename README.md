@@ -1,5 +1,5 @@
 # netflix-subtitle-shorcut
-A Netflix shortcut to make it easier to show and hide subtitles
+A Netflix shortcut to make it easier to show and hide subtitles on browsers.
 
 ## Disclaimer
 No guarantees. This software must not cause harm at all. Use it at your discretion.
